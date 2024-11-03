@@ -5,6 +5,161 @@ html{
 }
 
 body{
-    height: 100%;
-    background: #186AC9;
+    background: rgb(45, 136, 253);
+        background: linear-gradient(180deg, rgba(45, 136, 253, 1) 25%, rgba(255, 213, 1, 1) 100%);
+    }
+    
+    #container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .img {
+        text-align: center;
+    }
+    
+    img.atlas {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .sns {
+        text-align: center;
+        font-family: 'Yu Gothic';
+        font-weight: 350;
+        font-style: normal;
+        font-size: 40px;
+        color: #fff;
+    }
+    
+    .content {
+        background-color: rgba(0, 0, 0, 0.20);
+        padding-top: 20px;
+        width: 280px;
+        height: 330px;
+        border-radius: 20px;
+    }
+    
+    .welcome {
+        text-align: center;
+        font-family: 'Yu Gothic';
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .mail_title,
+    .pass_title,
+    .name_title {
+        font-family: 'Yu Gothic';
+        color: #fff;
+        text-align: left;
+    }
+    
+    .mail_title,
+    .pass_title {
+        font-family: 'Yu Gothic';
+        font-size: 15px;
+    }
+    
+    .content .a input,
+    .register .input {
+        border-radius: 5px;
+        height: 30px;
+        width: 215px;
+        border: none;
+        margin-bottom: 10px;
+        margin: 0, auto;
+    }
+    
+    .content a {
+        display: block;
+        text-align: center;
+        padding-top: 30px;
+        color: #fff;
+    }
+    
+    .content a:hover {
+        color: #9400D3;
+    }
+    
+    .new_user {
+        text-align: center;
+        color: #fff;
+    }
+    
+    .register {
+        background-color: rgba(0, 0, 0, 0.20);
+        padding-top: 20px;
+        width: 280px;
+        height: 430px;
+        border-radius: 20px;
+    }
+    
+    .userName,
+    .mail,
+    .pass,
+    .passAgain {
+        font-family: 'Yu Gothic';
+        color: #fff;
+        text-align: left;
+    }
+    
+    .userName,
+    .mail,
+    .pass,
+    .passAgain {
+        font-family: 'Yu Gothic';
+        font-size: 15px;
+    }
+    
+    .back {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .register a {
+        color: #fff;
+    }
+    
+    .register a:hover {
+        color: #9400D3;
+    }
+    
+    .add {
+        background-color: rgba(0, 0, 0, 0.20);
+        padding-top: 20px;
+        width: 280px;
+        height: 230px;
+        border-radius: 20px;
+        color: #fff;
+        font-family: 'Yu Gothic';
+        font-size: 15px;
+    }
+    
+    .addUser {
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .addText {
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .lg {
+        text-align: center;
 }

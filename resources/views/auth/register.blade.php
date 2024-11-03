@@ -2,26 +2,46 @@
 
 @section('content')
 <!-- 適切なURLを入力してください -->
-{!! Form::open(['url' => '/〇〇']) !!}
+{!! Form::open(['url' => '/register']) !!}
 
-<h2>新規ユーザー登録</h2>
+<div class="register">
+        <p class="new_user">新規ユーザー登録</p>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+        <ul>
+        <li class="userName">{{ Form::label('ユーザー名') }}
+        {{ Form::text('username',null,['class' => 'input']) }}
+        </li>
+        @error('username')
+                <span class="text-danger">{{ $message }}</span> <!-- エラーメッセージを表示 -->
+        @enderror
 
-{{ Form::label('メールアドレス') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
+        <li class="mail">{{ Form::label('メールアドレス') }}
+        {{ Form::text('mail',null,['class' => 'input']) }}
+        </li>
+        @error('mail')
+                <span class="text-danger">{{ $message }}</span> <!-- エラーメッセージを表示 -->
+        @enderror
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+        <li class="pass">{{ Form::label('パスワード') }}
+        {{ Form::password('password',['class' => 'input']) }}
+        </li>
+        @error('password')
+                <span class="text-danger">{{ $message }}</span> <!-- エラーメッセージを表示 -->
+        @enderror
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+        <li class="passAgain">{{ Form::label('パスワード確認') }}
+        {{ Form::password('password_confirmation',['class' => 'input']) }}
+        </li>
+        @error('password_confirmation')
+                <span class="text-danger">{{ $message }}</span> <!-- エラーメッセージを表示 -->
+        @enderror
 
-{{ Form::submit('登録') }}
+        </ul>
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+        <input type="submit" value="新規登録" class="btn btn-danger" style="margin-left: 160px;">
 
+        <p class="back"><a href="/login">ログイン画面へ戻る</a></p>
+</div>
 {!! Form::close() !!}
 
 
