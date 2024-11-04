@@ -403,10 +403,19 @@ p.count {
     display: flex;
     padding: 20px;
     border-bottom: 5px solid #e0e0e0;
+    width: 100%;
 }
 
 .user-icons {
     margin-left: 10px;
+    display: flex;
+        flex-wrap: wrap;
+        justify-items: flex-start;
+        width: 70%;
+    }
+    
+    .user-icons .user-icon {
+        margin: 3px 3px;
 }
 
 .user p {

@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-        <a href="/top"><img src="{{ asset('/storage/images/atlas.png')}}" class="atlas"></a>
+        <a href="/top"><img src="{{ asset('images/atlas.png')}}" class="atlas"></a>
             <div id="nav-open">
                     <p class="username">{{ Auth::user()->username }}　さん</p>
                     <div class="accordion">

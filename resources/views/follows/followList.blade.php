@@ -4,15 +4,18 @@
 
 
 <div class="user">
+  <div>
   <p>フォローリスト</p>
+  </div>
   <!-- ユーザーアイコン -->
-    @foreach($followings as $following)
     <div class="user-icons">
+    @foreach($followings as $following)
       <a href="{{route('userprofile',['id' => $following->id])}}">
         <img src="{{ asset('/storage/images/'.$following->images) }}" alt="{{ $following->username }}のアイコン" class="user-icon">
       </a>
-    </div>
+
     @endforeach
+    </div>
 </div>
 
 
@@ -22,13 +25,13 @@
 
         <ul>
         <li class="post-list">
-        <a href="{{route('userprofile',['id' => $following->id])}}">
+        <a href="{{route('userprofile',['id' => $post->user->id])}}">
         <img src="{{ asset('/storage/images/'.$post->user->images) }}" alt="{{ $post->user->username }}" class="user-icon"></a>
           <div class="post-contents">
             <div>
               <div class="username">{{ $post->user->username }}
               </div>
-              <div class="timestamp">{{ $post->created_at }}</div>
+              <div class="timestamp">{{ $post->created_at->format('Y-m-d') }}</div>
               </div>
               <div class="Post-content">
               {{ $post->post }}

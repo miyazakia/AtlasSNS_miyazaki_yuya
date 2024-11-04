@@ -152,6 +152,8 @@ return [
         'mail' => 'メールアドレス',
         'password' => 'パスワード',
         'password_confirmation' => '確認用パスワード',
+        'newPost' =>'新規投稿',
+        'upPost'=>'投稿編集',
     ],
 
 ];

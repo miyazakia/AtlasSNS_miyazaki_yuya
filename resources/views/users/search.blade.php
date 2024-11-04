@@ -17,11 +17,12 @@
 
     <table class="table">
         @foreach($users as $user)
-        <tr>
-            <td><img src="{{ asset('/storage/images/' . $user->images) }}" alt="{{ $user->username }}の画像" class=user-icon ></td>
-            <td>{{ $user->username }}</td>
 
-            <td>
+        <tr>
+            <td style="border-style:none"><img src="{{ asset('/storage/images/' . $user->images) }}" alt="{{ $user->username }}の画像" class=user-icon style="margin-left:30px;"></td>
+            <td style="border-style:none">{{ $user->username }}</td>
+
+            <td style="border-style:none">
                 @if (auth()->user()->isFollowing($user))
                     <form action="{{ route('unfollow', $user) }}" method="POST">
                         @csrf
