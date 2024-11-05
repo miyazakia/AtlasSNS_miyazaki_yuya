@@ -50,7 +50,7 @@
             <div>
               <div class="username">{{ $post->user->username }}
               </div>
-              <div class="timestamp">{{ $post->created_at->format('Y-m-d') }}</div>
+              <div class="timestamp">{{ $post->created_at->format('Y-m-d H:i') }}</div>
               </div>
               <div class="Post-content">
               {{ $post->post }}

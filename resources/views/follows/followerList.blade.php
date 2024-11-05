@@ -7,14 +7,12 @@
   <div>
   <p>フォロワーリスト</p>
   </div>
+
   <div class="user-icons">
   @foreach($followers as $follower)
-
   <!-- ユーザーアイコン -->
     <a href="{{route('userprofile',['id' => $follower->id])}}">
-    <img src="{{ asset('/storage/images/'.$follower->images) }}" alt="{{ $follower->username }}のアイコン" class="user-icon">
-    </a>
-
+    <img src="{{ asset('/storage/images/'.$follower->images) }}" alt="{{ $follower->username }}のアイコン" class="user-icon"></a>
   @endforeach
   </div>
 </div>
@@ -32,7 +30,7 @@
             <div>
               <div class="username">{{ $post->user->username }}
               </div>
-              <div class="timestamp">{{ $post->created_at->format('Y-m-d') }}</div>
+              <div class="timestamp">{{ $post->created_at->format('Y-m-d H:i') }}</div>
               </div>
               <div class="Post-content">
               {{ $post->post }}
